@@ -1,0 +1,95 @@
+/*  
+
+    Las medidas en CSS se pueden agrupar en 2 grupos: 
+        - ABSOLUTAS
+        - RELATIVAS
+
+    Las medidas absolutas no cambian y siempre mantendrán su tamaño independientemente del dispositivo o la interacción del usuario.
+    la más usada es px (píxeles) cuya medida es 1/96 de 1in, pero existen otras como: 
+        - cm(centímetros) -> 1 cm = 96px/2,54
+        - mm(milímetros) -> 1mm = 1/10 de 1cm
+        - Q(cuarto de milímetro) -> 1Q = 1/40 de 1cm
+        - in(inches, pulgadas) -> 1in = 2,54cm = 96px
+        - pc(picas) -> 1pc = 1/16 de 1in
+        - pt(puntos) -> 1pt = 1/72 de 1in
+
+    Las medidas relativas siempre dependen de un contexto. Son las que se recomienda utilizar en la gran mayoría de ocasiones porque nos van a permitir que todos los elementos escalen proporcionalmente.
+    Las más usadas son em, rem, %, vw, vh, vmin y vmax, aunque tenemos otras como: 
+         - ex -> altura x de la fuente del elemento
+         - ch -> la medida del ancho del glifo "0" de la letra del elemento
+         - lh -> altura de la línea del elemento
+
+         ** glifo -> cada dibujo de una fuente
+
+    EM Y REM 
+    ** (la m se usa como referencia de medida, ya que es la letra más ancha)
+
+    rem -> corresponde a la medida de la "m" de la raíz del documento (html)
+
+    ejemplo: 16px = 1rem -> 32px = 2rem
+
+    em -> corresponde a la medida de la "m" del contexto donde nos encontremos
+
+    ejemplo: si ponemos en el body font-size: 10px; y luego en un h1, que está dentro del body, un font-size: 2em; estaríamos dándole un tamaño de 20px (10px * 2)
+
+    El estandar del tamaño de fuente por defecto en la raíz del documento es 16px, y NO ES RECOMENDABLE MODIFICARLO
+
+    Nota: Tanto "em" como "rem" se calcula en base a la propiedad font-size (tamaño de fuente). 
+
+    ** Para tamaños de fuente, usar "rem"
+
+    Ejemplo de cuando utilizar rem o em: 
+
+    .link{
+        background-color: ligthcoral;
+        color: #333;
+        padding: 1em 2em;
+        border-radius: 0.5em;
+        font-size: 2rem;
+    }
+
+    En este caso, al ponerlo así, el enlace tendrá siempre las mismas proporciones. Si cambiasemos los em por rem, a medida que el enlace se hiciese más grande, el padding iría disminuyendo y no guardaría esa proporcionalidad.
+
+    Conclusión: 
+        - Si la medida del texto tiene que crecer proporcionalmente al tamaño del texto, utilizar em
+        - Si la medida tiene que ser siempre la misma y relativa al tamaño de la fuente de la raíz, usar rem
+
+    #################  PORCENTAJE  ########################
+
+    % -> cuando usamos porcentaje usamos de referencia el tamaño del contenedor y el navegador calcula ese porcentaje. Esto no ocurre cuando usamos transform.
+
+    auto -> cuando usamos auto, le pedimos al navegador que calcule en función del espacio disponible
+
+    #################  HEIGHT  ########################
+
+    % -> cuando estamos dentro de un contenedor, este tiene que tener un alto declarado, sino no podrá calcular el porcentaje. Si se le aplica una medida con porcentaje, se sustituirá automáticamente por auto
+
+    auto -> cuando utilizamos auto, el alto lo calculará el navegador en base al contenido del elemento
+
+    NOTA: height es una propiedad que tenemos que usar con mucho cuidado. Si no es necesario establecer un alto, dejad que el contenido sea el que decida el alto del elemento
+
+    #################  VIEWPORT  ########################
+
+    El viewport es el área útil donde se mostrará la página web. IMPORTANTE, tened en cuenta que es el área visible sin hacer scroll.
+    Podemos usar el viewport como medida de varias formas:
+        - vw -> Viewport Width, hace referencia al ancho
+        - vh -> Viewport Heigth, hace referencia al alto
+        - vmx -> Utiliza el valor más grande entre el ancho y el alto del viewport
+        - vmin -> Utiliza el valor más pequeño entre el ancho y el alto del viewport
+        
+        1vw = 1% del ancho del viewport -> width: 100vw (ocupa el ancho total del viewport)
+        1vh = 1% del alto del viewport
+        1vmin = 1% del valor que sea más pequeño del viewport
+        1vmax = 1% del valor que sea más grande del viewport
+
+        ** Se ajustan al tamaño de la ventana, ya esté maximizada o se haga pequeña
+
+    Limitadores al ancho y alto
+        Cuando establecemos un width y/o height con una medida que es relativa, es posible que no queramos que se respete esa medida en todos los casos.
+        Para ello, tenemos propiedades que limitan esas medidas: 
+            - min-width
+            - max-width
+            - min-height
+            - max-height
+
+*/

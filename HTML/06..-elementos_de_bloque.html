@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Ocupan todo el ancho de la pagina, lo necesiten o no -->
+    <h1>Soy un elemento de bloque h1</h1>
+    <p>Soy un elemento de bloque p</p>
+
+<!-- 
+    
+    address -> se utiliza para aportar informacion de contacto para el article mas cercano o para todo el body
+
+    blockquote -> se utiliza para marcar las citas a otros autores o documentos. Se puede incluir el atributo cite para poner un enlace al documento original o fuente. Este enlace es significativo, no lleva a él
+
+    pre -> se utiliza para tener codigo preformateado que necesita ser representado igual que se escribió
+
+    div -> se usa como division del documento, semanticamente no significa nada, es un contenedor generico que se usa generalmente para dar estilos a traves de css o para usar aglo denominado "delegacion de eventos" en JavaScript
+
+    hr -> horizontal rule, se utiliza para decirle al navegador que vamos a cambiar de tema. No sirve para dibujar lineas, sirve para cambiar de temas
+
+ -->
+
+ <!-- Etiquetas de linea
+
+    span -> es un contenedor de linea, equivalente a div. Se suele usar para encerrar palabras o pequeños textos y darles estilo a traves de CSS o localizarlos desde JavaScript. Semanticamente no significa nada
+
+    q -> es el equivalente a blockquote, significa quote, por eso el de bloque se llama block - quote. Sirve para poner citas pero en linea
+
+    code -> sirve para encerrar codigo que queremos representar visualmente. Suele ir unido con la etiqueta <pre>
+
+    Entidades especiales en HTML - Codigo ASCII
+    http://ascii.cl/es/codigos-html.html
+    Sirve para poder escribir etiquetas 
+    Ej -> 
+        el simbolo < se escribe como &#60
+
+-->
+
+    <h2>Más elementos de bloque</h2>
+
+    <p>Address</p>
+
+    <address>
+        Tony Stark <br>
+        Malibú 10880 <br>
+        90265 <br>
+        California
+    </address>
+
+    <p>Blockquote</p>
+    <blockquote cite="https://wwww.citasonline.com">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At corporis sint expedita, eos perferendis, eaque tempore repellat, ab enim facilis repudiandae laboriosam architecto ratione aut iste magni sed nihil explicabo?</p>
+    </blockquote>
+
+    <p>Pre</p>
+    <pre>
+        Hola        A todos
+            Esto es     Un texto
+        Formateado
+    </pre>
+
+    <p>Div</p>
+    <div>
+        <h2>Nombre</h2>
+        <p>Email</p>
+        <p>Descripcion</p>
+    </div>
+    <hr>
+    <p>Linea que se usa para cambiar de tema</p>
+    <hr>
+
+    <!-- Etiquetas en linea -->
+
+    <h1>Etiquetas en linea</h1>
+    <h2>Span</h2>
+    <p>Lorem ipsum dolor sit amet <span> dentro de la etiqueta span</span> consectetur adipisicing elit. Corporis repudiandae atque molestiae minus officiis quaerat quo maiores facere saepe minima commodi in quia blanditiis consequatur quisquam, quod harum tenetur. Veritatis.</p>
+
+    <q cite="">Yo soy Iron Man</q>
+
+    <p>La etiqueta &#60code&#62 sirve para formatear codigo</p>
+    <pre>
+        <code>
+            span {
+                color: red;
+            }
+        </code>
+    </pre>
+
+</body>
+</html>

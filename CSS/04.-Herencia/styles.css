@@ -1,0 +1,25 @@
+/* 
+ 
+ Herencia -> Es la capacidad que tienen algunos elementos de heredar algunas propiedades de sus elementos contenedores (padres, abuelos, etc)
+
+ los enlaces no heredan las propiedades
+
+ Para heredar, se usa "inherit"
+
+ Si se quiere eliminar la herencia, se usa "initial"
+
+ */
+
+ .title{
+    color: cyan;
+    font-size: 10px;
+ }
+
+ .text{
+    color: red
+ }
+
+ .link{
+    color: inherit;
+ }
+

@@ -1,0 +1,60 @@
+/* Selectores */
+
+/*
+
+    Selectores Simples
+        Selectores elementales
+            Selector Universal -> * (No se debe usar)
+            Selector de tipo o etiqueta -> p{}
+        Selectores de atributo
+            id -> #
+            clase -> .class
+            otros atributos
+                [atributo_que_queremos_seleccionar]
+                [atributo=valor]
+                [atributo^=valor] -> atributo que empiece por ese valor
+                [atributo*=valor] -> si coincide con el valor sin importar donde esté
+                [atributo$=valor] -> si termina por ese valor
+                [atributo|=valor] -> Un ejemplo son los idiomas
+
+    Selectores Compuestos
+        Selectores Agrupados -> se separan por comas (.text-1, .text-2 {})
+        Selectores Combinados
+            Selector descendiente (para hijos) -> se selecciona un elemento dentro de otro. Se separan con un espacio (div h2{}) -> se recomienda no usar más de 2 elementos
+
+            Selector de hermano siguiente (elementos al mismo nivel) -> (.text + h2{}) Se selecciona solo el hermano siguiente
+            
+            Selector de hermanos siguiente ~ (AltGR + 4) -> (.text ~ p) -> Se seleccionan todos los hermanos siguientes que haya
+
+            Selector de hijo directo -> Seleccionamos solo los hijos directos (.container > p {})
+
+
+        Pseudoclases - Pseudoelementos
+
+*/
+
+/* h1{
+    background-color: aqua;
+}
+
+p{
+    background-color: burlywood;
+} */
+
+.title{
+    background-color: burlywood;
+}
+
+[href]{
+    background-color: red;
+}
+
+/* IMPORTANTE poner comillas */
+[href="#color-modo-random"]{
+    background-color: aquamarine;
+}
+
+/* Cambia de color los p que tengan el atributo lang="en" */
+[lang="en"]{
+    background-color: orange;
+}

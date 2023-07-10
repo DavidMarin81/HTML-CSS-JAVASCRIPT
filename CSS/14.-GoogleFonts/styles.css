@@ -1,0 +1,45 @@
+/*  
+
+#################### FUENTES ###############################
+
+fonts.google.com
+
+Elegir " + Select this style" para que nos dé el enlace de la tipografía
+
+Seleccionar "<link>" y no "@import"
+
+Copiar el código que nos da y ponerlo encima de los estilos en el html
+
+En la página de google fonts, copiar donde pone "CSS rules to specific families" para ponerlo en CSS
+
+#################### ICONOS ###############################
+
+Para poder usar los iconos y que se vean, pegar estos links en una etiqueta link en el html
+
+Google Icons
+    Material Icons
+       https://fonts.googleapis.com/css?family=Material+Icons
+    Material Icons Outlined
+       https://fonts.googleapis.com/css?family=Material+Icons+Outlined
+    Material Icons Two Tone
+       https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone
+    Material Icons Rounded
+       https://fonts.googleapis.com/css?family=Material+Icons+Round
+    Material Icons Sharp
+       https://fonts.googleapis.com/css?family=Material+Icons+Sharp
+      
+    Nota: Si vas a usar una gran cantidad de iconos en tu web compensa usar la librería remota
+    Si sólo usarás unos pocos es mejor descargarlos en formato svg y utilizarlos como imágenes. Se pueden descargar desde google fonts. Al no ser iconos y convertirse en imagen, no se pueden cambiar de color, por ejemplo. Habría que mirar un video sobre SVG para saber como trabajar con ellos y poder modificarlos
+
+*/
+
+body{
+    background-color: #333;
+    color: white;
+    /* copiado de google fonts */
+    font-family: 'Caprasimo', cursive;
+}
+
+span{
+    color: red;
+}

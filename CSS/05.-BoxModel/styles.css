@@ -1,0 +1,118 @@
+/* 
+
+    Elementos en bloque -> 
+        - ocupan el ancho de la página
+        - Si no se le asigna un width, no funcionaría el margin porque ya está ocupando por defecto el ancho de la página
+
+    Elementos en línea -> ocupan solo el contenido
+
+    Margin:
+        Es la propiedad que nos permite generar espacio entre elementos.
+        Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar márgenes.
+        margin-top, margin-right, margin-botton, margin-left
+
+        Admite hasta 4 valores que van en el orden de las agujas del reloj
+        4 valores -> margin: top, right, botton, left;
+        3 valores -> margin: top, left/right, bottom;
+        2 valores -> margin: top/bottom, left/right;
+        1 valor   -> margin: top/right/bottom/left;
+
+    Padding:
+        Es la propiedad que nos permite generar espacio interno entre el borde y la caja.
+        Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar padding.
+
+        Admite hasta 4 valores que van en el orden de las agujas del reloj
+        4 valores -> padding: top, right, botton, left;
+        3 valores -> padding: top, left/right, bottom;
+        2 valores -> padding: top/bottom, left/right;
+        1 valor   -> padding: top/right/bottom/left;
+
+    Border: 
+        Es la propiedad que nos permite modificar el borde de la caja.
+        Es un shorthand (propiedad abreviada) que agrupa 3 propiedades:
+            border-width -> ancho del borde
+            border-style -> estilo del borde
+            border-color -> color del borde
+
+        listado de valores para style:
+            none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset
+
+    Box-sizing: 
+        Es la propiedad que nos permite controlar el cálculo que hace el navegador a la hora de modificar las propiedades.
+        Tiene dos valores:
+            - content-box -> valor por defecto
+            - border-box -> cálculo de tamaño del elemento incluyendo el padding y el border
+
+        IMPORTANTE: se pone el selector universal: 
+        *{
+            box-sizing: border-box;
+        }
+        Para que realice el cálculo del tamaño con el borde. Se tiene en cuenta el borde y el padding para hacer el cálculo con el content
+
+    Border-radius: 
+        Se usa para redondear los bordes. El tamaño asignado corresponde al radio de una circunferencia
+
+    Overflow:
+        Decimos que un contenido se desborda cuando la caja es más pequeña que el contendor.
+        Es la propiedad que controla qué debe hacer la caja cuando su contenido se desborda del contenedor.
+        Es un shorthand que englova overflow-x y overflow-y
+        Tiene cuatro posibles valores: 
+            - visible -> es el valor por defecto
+            - hidden -> el contenido que se desborda no se verá. Si aplicamos esta propiedad en un solo eje, el otro se pondrá automáticamente en el valor scroll.
+
+            - scroll -> aparecerán barras de scroll en el eje asignado (x, y o ambos)
+            - auto -> aparecerán barras de scroll en el caso de que hicieran falta
+
+    ¡¡¡LOS MARGENES VERTICALES SE SOLAPAN!!!
+    No hay solución. Es un problema de CSS
+
+    ¡¡¡TAMBIEN SE DA UN PROBLEMA CON LOS MARGENES ENTRE PADRES E HIJOS!!!
+    Si creas un header, aparece pegado a la parte de arriba de la página. Si le añades un h1, aparecerá un margen.
+    Para solucionarlo: 
+        - se puede poner un overflow:hidden;
+        - poniendo un padding-top: 0.1px;
+        - poniendo un border-top: 0.1px solid y el mismo color de fondo
+
+    Se solucionaría empujando los elementos hacia abajo con margin-bottom.
+    
+
+*/
+
+body{
+    background-color: #333;
+    color: #fff;
+}
+
+.title{
+    background-color: aqua;
+}
+
+.block{
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    border:border-box;
+    border: 5px solid red;
+    border-radius: 50px;
+}
+
+/* Los elementos en línea no llevan width ni height */
+.inline{
+    background-color: lightcoral;
+    color: inherit;
+}
+
+.box{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background-color: lightcyan;
+    width: 300px;
+    height: 300px;
+    color: #000;
+
+    /* Para controlar el desbordamiento */
+    overflow: auto;
+
+}

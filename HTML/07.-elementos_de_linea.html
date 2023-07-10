@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Elementos de linea -->
+    <!--    em      -> enfasis
+            strong  -> más enfasis
+            small   -> menos enfasis que el texto normal
+            wbr     -> salto de linea si hiciera falta
+            time    -> se usa para representar un contenido de hora/fecha
+            i       -> italic
+            b       -> bold
+            u       -> underline
+            sup     -> superindice
+            sub     -> subindice
+    -->
+    <!-- em saldrá en cursiva, pero por el enfasis. Para poner en cursiva se usa CSS -->
+    <p><em>El dinero</em> es importante pero la salud es lo más importante</p>
+
+    <!-- strong lo pone en negrita, pero por el enfasis -->
+    <p><em>El dinero</em> es importante pero <strong>la salud</strong> es lo más importante</p>
+
+    <p><em>El dinero</em> es importante pero <strong>la salud</strong> es lo más importante. <small>Un saludo</small></p>
+
+    <!-- El wbr se usa para elementos que ocupan más del ancho de la pagina. -->
+    <!-- Un ejemplo es una direccion url. wbr va indicando donde se debe hacer el salto de linea -->
+
+    <!-- El guion lo interpreta como una etiqueta wbr -->
+
+    <p>http://127.0.0.1:5500/<wbr>cursos/<wbr>curso_html/<wbr>elementos/<wbr>07.-elementos_de_linea.html</p>
+
+    <time>25/06/2023 10:47</time>
+
+    <!-- Estas 3 etiquetas son las unicas que sirven para dar estilo en html -->
+    
+    <p>
+        <i>Italic</i>
+        <b>Bold</b>
+        <u>Underline</u>
+    </p>
+
+    <!-- La etiqueta i casi seguro que solo se usará para poner iconos -->
+    <!-- pagina para ver iconos = https://fontawesome.com/ -->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <h1><i class="fab fa-apple"></i> Hola soy una manzana</h1>
+
+    <!-- Se usa para casos matematicos, por ejemplo -->
+
+    <p>4 elevado al cuadrado se representa asi 4<sup>2</sup></p>
+
+    <!-- Se usa para formulas quimicas, por ejemplo -->
+
+    <p>Agua oxigenada tiene la formula H<sub>2</sub></p>
+    
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <!-- 
+
+        La estructura basica de un formulario se compone de 4 elementos
+
+        - form -> es la etiqueta que engloba nuestro formulario
+        - label -> sirve para escribir el nombre del campo a rellenar. Debe tener el atributo "FOR" al cual se le indica un id que lo que hará será emparejar el label con su input correspondiente
+        - input -> sirve para crear un campo que permitirá al usuario interactuar. El único atributo obligatorio del input es "NAME"
+        - button -> crea un botón que permitirá enviar el formulario
+
+        input type:
+            - button -> se comporta igual que el botón <button>. 
+                
+                - etiqueta tipo button -> envia el formulario // igual que "submit"
+                - input type="button" -> coge funcionalidad con JavaScript
+                El texto que aparecerá en el botón se establece con el atributo "value"
+
+            - hidden -> campo oculto, puede contener valor pero no se mostrará
+
+            - date -> se utiliza para introducir una fecha
+            - datetime -> obsoleto
+            - datetime-local -> fecha y hora, no funciona en firefox
+            - month -> se utiliza para introducir un mes
+            - week -> se utiliza para introducir el número de la semana del año
+            - time -> se utiliza para introducir una hora
+
+            - search -> se utiliza para las barras de búsqueda
+            - tel -> se utiliza para introducir números telefónicos
+            - email -> se utiliza para introducir un email
+            - password -> se utiliza para contraseñas
+            - url -> se utiliza para introducir URLs
+
+            - color -> se utiliza para especificar un color
+            - number -> se utiliz para valores numéricos
+            - range -> se utiliza para establecer un rango
+                atributos:
+                    - step -> el rango se moverá de valor en valor introducido 
+                    - min
+                    - max
+            - reset -> se utiliza para resetear el formulario
+            - text -> valor por defecto
+
+            - submit -> se utiliza para enviar el formulario
+
+            - radio -> permite seleccionar una única opción de una lista de opciones relacionados
+            - chechbox -> permite seleccionar varias opciones de una lista de opciones relacionadas
+            - select -> crea una lista de opciones donde podemos seleccionar una o varias opciones
+                Cada opción irá dentro de una etiqueta <option>
+                Si tenemos muchas opciones podemos ordenarlas por categorías a través de la etiqueta <optgroup> con el atributo label para nombrar la categoría
+
+            - list -> lista con ayuda de busqueda
+
+            - fieldset -> se utiliza para agrupar elementos dentro de un formulario
+            - legend -> pone un título al fieldset
+            - file -> se utiliza para cargar archivos y enviarlos desde un formulario
+            - meter -> representa un valor dentro de un rango conocido
+            - textarea -> se utiliza para introducir texto en un formulario
+
+            ### ATRIBUTOS DE LOS FORMULARIOS ###
+
+            - placeholder -> da una pista de lo que el usuario tiene que introducir
+            - required -> hace que un campo sea obligatorio
+            - readonly -> hace que un campo sea de solo lectura
+            - min - max -> establece el mínimo y el máximo de un campo numérico
+            - maxlength - minlength -> establece el máximo y el mínimo de caracteres de un campo de texto
+            - selected -> equivale a checked en los select, sirve para establecer una opción por defecto
+            - disabled -> desactiva el campo, no se podrá escribir en el autofocus
+            - autofocus -> para poner el foco por defecto al cargar el formulario
+            
+     -->
+
+     <form>
+        <label for="name">Nombre</label>
+        <input id="name">
+        <button>Enviar Formulario</button>
+
+        <hr>
+
+        <h2>Inputs para fechas</h2>
+        <input type="date">
+        <input type="datetime-local">
+        <!-- Se aconseja usar estos dos -->
+        <input type="date">  
+        <input type="time">
+        <input type="month">
+        <input type="week">
+
+        <hr>
+
+        <h2>Inputs para móviles (saldrá un teclado distinto para cada tipo)</h2>
+        <div></div>
+            <label>Search
+                <input type="search">
+            </label>
+        <div>
+            <label>Teléfono
+                <input type="tel">
+            </label>
+        </div>    
+        <div>
+            <label>Email
+                <input type="email">
+            </label>
+        </div>
+        <div>
+            <label>Password
+                <input type="password">
+            </label>
+        </div>
+        <div>
+            <label>URL
+                <input type="url">
+            </label>
+        </div>
+
+        <hr>
+
+        <h3>Color</h3>
+        <input type="color">
+        <h3>Number</h3>
+        <input type="number">
+        <h3>rango</h3>
+        <input type="range">
+        <h3>Reset</h3>
+        <input type="reset">
+        <h3>Hidden</h3>
+        <input type="hidden">
+        <p>(Sirve para poder mostrar u ocultar valores)</p>
+
+        <hr>
+
+        <h2>Elementos seleccionables</h2>
+        <h3>Género (RADIO)</h3>
+        <!-- el atributo "name" relaciona los inputs para que solo se pueda seleccionar uno -->
+        <!-- en "value" se indica el valor que se enviará -->
+        <label>Masculino
+            <input type="radio" name="gender" value="masculino" checked>
+        </label>
+        <label>Femenino
+            <input type="radio" name="gender" value="femenino">
+        </label>
+
+        <hr>
+
+        <h3>Lenguajes (CHECKBOX)</h3>
+        <label>
+            <input type="checkbox" name="languages" value="html" checked>
+            HTML
+        </label>
+        <label>
+            <input type="checkbox" name="languages" value="css">
+            CSS
+        </label>
+        <label>
+            <input type="checkbox" name="languages" value="javascript">
+            JAVASCRIPT
+        </label>
+
+        <hr>
+
+        <h3>Lenguajes (SELECT)</h3>
+        <!-- Si queremos seleccionar más de una, se usa el atributo "multiple" -->
+        <select name="lenguajes">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JAVASCRIPT</option>
+        </select>
+
+        <hr>
+
+        <h3>Mascotas (SELECT ANIDADOS)</h3>
+        <select name="mascotas">
+            <optgroup label="4 patas">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="hamster">Hamster</option>
+                <option value="conejo">Conejo</option>
+            </optgroup>
+            <optgroup label="Aves">
+                <option value="loro">Loro</option>
+                <option value="canario">Canario</option>
+            </optgroup>
+            <optgroup label="Otras">
+                <option value="serpiente">Serpiente</option>
+                <option value="tarantula">Tarántula</option>
+            </optgroup>
+        </select>
+
+        <hr>
+
+        <h3>Mascotas (DATALIST)</h3>
+        <input type="list" list="pets">
+        <datalist id="pets">
+            <option value="perro"></option>
+            <option value="gato"></option>
+            <option value="hamster"></option>
+            <option value="conejo"></option>
+            <option value="loro"></option>
+            <option value="canario"></option>
+            <option value="serpiente"></option>
+            <option value="tarantula"></option>
+        </datalist>
+        
+        <hr>
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="name">Nombre</label>
+            <input type="text" id="name">
+            <label for="surname">Apellidos</label>
+            <input type="text" id="surname">
+        </fieldset>
+        <input type="file">
+        <label for="fuel">Combustible</label>
+        <!-- "low" y "high" se usan para que la barra cambie de color el progreso -->
+        <meter id="fuel" min="0" max="100" value="20" low="30" high="75" optimum="50">
+        </meter>
+
+        <label for="task">Tarea 1</label>
+        <progress id="task" max="100" value="20"></progress>
+        <br>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+
+     </form>
+
+</body>
+</html>

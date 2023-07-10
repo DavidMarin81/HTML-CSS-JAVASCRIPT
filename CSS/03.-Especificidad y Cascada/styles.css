@@ -1,0 +1,23 @@
+/*
+
+ ¿Cómo funciona CSS?
+    Especificidad -> Establece cómo de específico es un selector para saber que estilo aplicar.
+    El cálculo se realiza con la siguiente fórmula:
+
+        Etiquetas y pseudoelementos 001
+        Clases, atributos y pseudoclases 010
+        Ids 100
+        Estilos en línea (etiqueta HTML) 1000
+        !important GANA A TODO Y NO SE USA NUNCA
+
+    Cascada -> Funciona siempre que la especificidad sobre el elemento sea la misma
+
+    Página para saber si se está escribiendo un buen CSS:
+    
+    https://jonassebastianohlsson.com/specificity-graph/
+
+*/
+
+h1{
+    background-color: navajowhite;
+}

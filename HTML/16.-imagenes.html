@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+
+        Para imágenes, se recomienda usar archivos .webp
+
+        Conversor de imagenes webp:
+         
+        https://imagen.online-convert.com/es/convertir-a-webp
+
+
+
+     -->
+
+     <!-- 
+
+        Para insertar imagenes, se crea una carpeta assets/images donde se meterán los archivos:
+
+        <img src="ruta de la imagen" alt="Se recomienda ponerlo para cuando la imagen no cargue">
+
+        Si no se pone "alt" el validador dará un error
+
+      -->
+
+    <h1>Contenido embebido</h1>
+    <img src="/assets/images/logo_google.webp" alt="Logo de Google">
+
+    <!-- 
+
+        DPR (Device Pixel Ratio)
+        Es la relación que existe entre los píxeles reales que tiene el dispositivo y los píxeles que tenemos disponibles para "pintar" contenido
+
+        DPR = píxeles reales / píxeles disponibles
+
+        Página para comprobar cuanto espacio disponible tenemos para dibujar en nuestra pantalla (DPR: 1 (pantalla PC), DPR: 3 (dispostivo móvil))
+
+        https://whatismyviewport.com/
+
+        Se debe usar una imagen para la versión de escritorio y otra para la versión móvil. Para ello se usa el atributo srcset
+
+        <img srcset="
+            /assets/images/logo_google
+            /assets/images/logo_google_mobile 2x  (Se usaría cuando hubiese DPR 2)
+            /assets/images/logo_google_mobile 3x" (Se usaría cuando hubiese DPR 3)
+        alt="Imagen de portada">
+
+     -->
+
+     <h2>Etiqueta "Picture" -> Etiqueta nueva</h2>
+     <!-- Puede ser que algunos navegadores no lo acepten -->
+     <picture>
+        <source srcset="
+        /assets/images/logo_google.webp" media="(max-width:1200px)
+        /assets/images/logo_google_mobile.webp" media="(max-width:300px)">
+        <!-- El atributo "media" hace que la foto se cargue a partir de que el width sea mayor de X píxeles. No es necesario usar media -->
+        <img src="/assets/images/logo_google.webp" alt="Logo de Google">
+        <!-- img se usa como imagen de seguridad por si ninguna carga. Es obligatorio ponerlo para que funcione la etiqueta picture -->
+     </picture>
+
+
+</body>
+</html>
