@@ -82,5 +82,29 @@ var segundoParrafo = document.getElementById("segundo");
         //Se elimina el elemento
         padre.removeChild(elementoAEliminar);
 
+    //Acceso a los atributos del DOM
+        //Se localiza al padre
+        var padreCuadrado = document.getElementById("contenedor");
+        //Se localiza una referencia para colocar el nuevo cuadrado
+        var referencia = document.getElementsByTagName("div")[1];
+        //Se crea el nuevo cuadrado
+        var cuadrado = document.createElement("div");
+        //Se le asignan los atributos (Se puede usar para modificar los demás atributos que tenga)
+        cuadrado.setAttribute("class", "azul");
+        //Se inserta el cuadrado antes del primer cuadrado (que ya lo tenemos localizado con su referencia)
+        padreCuadrado.insertBefore(cuadrado, referencia);
 
+
+        //Se pueden modificar los atributos de otra manera
+        cuadrado.className = "rojo"; //Cambiará el cuadrado a rojo, por los estilos .css
+        cuadrado.id = "NuevoId"; //Se le asigna un id al cuadrado
+
+    //Modificando el estilo de los elementos
+        var encabezado = document.getElementById("encabezado");
+        //Se asignan dos estilos al elemento (van separados por un espacio)
+        encabezado.className = "tituloH1 tituloH1Grande"; 
+        //Se le cambia el color a la letra
+        encabezado.style.color = "navy";
+        //Se le cambia el color de fondo
+        encabezado.style.background = "lime";
 
