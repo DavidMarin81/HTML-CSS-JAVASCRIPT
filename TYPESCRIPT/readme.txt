@@ -11,7 +11,7 @@
 
     ts-node index.ts
 
-- Para compilar el programa
+- Para compilar el programa (y que se modifique el archivo .js)
 
     npx tsc index.ts
 
@@ -19,5 +19,5 @@
     Para ello, incluir en el package.json:
 
     "scripts": {
-    "build": "ts-node index.ts"
+        "build: "npx tsc index.ts"
     },
