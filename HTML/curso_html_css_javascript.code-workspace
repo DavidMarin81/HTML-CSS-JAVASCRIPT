@@ -8,9 +8,12 @@
 		},
 		{
 			"path": "..\\JAVASCRIPT"
+		},
+		{
+			"path": "..\\TYPESCRIPT"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "JAVASCRIPT"
+		"liveServer.settings.multiRootWorkspaceName": "CSS"
 	}
 }
