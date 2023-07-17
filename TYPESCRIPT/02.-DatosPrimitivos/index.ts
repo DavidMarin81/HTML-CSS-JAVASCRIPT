@@ -15,4 +15,19 @@
 //String
     let cadenas : string = "Hola mundo";
 
+/* Variables propias de Typescript */
 
+//Any (no se suele utilizar)
+    /* (acepta cualquier cosa. Se puede cambiar de tipo en cualquier momento. Se usa cuando se importan archivos .js y nos da algun aviso de error) */
+    let cualquiera : any = "df";
+
+//Null
+    /* no se le puede asignar nada */ 
+    let nada : null = null;
+
+//Undefined
+    let indefinido : undefined = undefined;
+
+//void
+    /* se usa para definir que una variable no devuelva nada */
+   
