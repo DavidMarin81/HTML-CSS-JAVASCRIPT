@@ -1,0 +1,15 @@
+TIPOS DE DATOS
+
+STRING -> "manzana"
+
+NUMBERS -> 1234, 9.5, -34
+
+BOOLEAN -> true 1, false 0
+
+NULL -> null
+
+VALUES -> "david" + "marin", 5 + 10
+
+OBJECTS -> obj1 = nombre, apellido, edad
+
+ARRAYS -> array{1, 2, 3}
