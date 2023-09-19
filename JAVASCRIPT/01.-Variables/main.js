@@ -1,8 +1,13 @@
+//Hay 3 tipos de variables (var, let, const)
+var name = "David";
+let counter = 1;
+const PI = 3.14;
+
+//Ejemplos
 var nombre = "David";
 
 //Manda un mensaje de alerta en la página web
 alert("Bienvenido " + nombre);
-
 
 //Con prompt, se piden datos al usuario
 var nombre2;
