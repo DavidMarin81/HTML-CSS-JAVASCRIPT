@@ -1,0 +1,31 @@
+.{
+  
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 10vh calc(80vh - 10px) 10vh; 
+  /* Por si queremos aprovechar la pagina y que no salga la barra de scroll, se calcula con esa formula. Hacer el reset para eliminar bordes por defecto */
+  margin: 0; /* o restarle los 16px o los 8px del borde */
+  gap: 10px;
+  row-gap: 5px;
+}
+header {
+  min-height: 50px;
+  background-color: red;
+  grid-column: 1/3;
+}
+aside {
+  min-height: 50px;
+  background-color: green;
+}
+main {
+  min-height: 50px;
+  background-color: blue;
+}
+footer {
+  grid-column: 1/3;
+  background-color: gray;
+  min-height: 50px;
+}
