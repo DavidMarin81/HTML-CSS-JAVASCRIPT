@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+
+    <!-- Para lanzar el archivo .js y que antes de lanzarlo, se cargue la pagina -->
+    <script src="intro.js" defer></script>
+    <!-- A veces, se puede llamar a eventos del body que darán fallo por no estar cargado todavía el html -->
+    
 </head>
 <body>
     <h1>Sitio web</h1>
+
+    <!-- Otra opción, para evitar problemas de cargar el .js, es lanzarlo al final del documento html -->
     <script src="intro.js"></script>
 </body>
 </html>
