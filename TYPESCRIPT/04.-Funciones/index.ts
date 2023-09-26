@@ -8,6 +8,12 @@
 
     sumar(3, 4);
 
+//Funcion void
+
+    increaseBy(): void {
+    this.counter ++;
+  }
+
 //Funcion con argumento de tipo funcion
     let multiplicar : (m : number, n : number) => number;
     multiplicar = (m, n) => m * n;
